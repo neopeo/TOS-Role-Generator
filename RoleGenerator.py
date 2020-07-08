@@ -83,10 +83,11 @@ def roll(chosenCategory, finalRoles):
             if (covenGame == False) and (proposedRole == ("Psychic")):
                 validRole = False
             else:
-                if proposedRole in dlcRoles or proposedRole == "Vampire Hunter":
-                    validRole = False
+                if (proposedRole in dlcRoles and proposedRole not in covenEvil) or proposedRole == "Vampire Hunter":
+                    validRole = False   
                 else: 
                     validRole = True
+                
 
         
         
@@ -146,13 +147,17 @@ while choice != "d" and (count != 15):
         if choice == "12" or  (choice in covenEvil):
             if numberOfCoven == 5:
                 print ("Too many Coven, please pick a different role!")
+                count = count - 1
             else: 
                 numberOfCoven = numberOfCoven + 1
                 covenGame = True
-        
-        roleList.append(choice)
-        print("Choice added, type d if you are done!")
-        count = count + 1
+                roleList.append(choice)
+                print("Choice added, type d if you are done!")
+                count = count + 1
+        else:
+            roleList.append(choice)
+            print("Choice added, type d if you are done!")
+            count = count + 1
 
 
 finalRoles = rolelistgeneration(roleList)
@@ -162,3 +167,4 @@ count = 0
 for count in range(len(finalRoles)):
     print (str(count + 1) + ". " + finalRoles[(count - 1)])
 print ("End of program")
+input()
