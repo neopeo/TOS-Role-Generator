@@ -27,33 +27,33 @@ def rolelistgeneration(roleList):
     count = 1
     for count in range(len(roleList)):
         chosenCategory = roleList[(count - 1)]
-        if chosenCategory == "Town Investigative" or chosenCategory == 1:
+        if chosenCategory == "Town Investigative" or chosenCategory == "1":
             finalRoles = roll(townInv, finalRoles)
-        elif chosenCategory == "Town Protective" or chosenCategory == 3:
+        elif chosenCategory == "Town Protective" or chosenCategory == "3":
             finalRoles = roll(townProt, finalRoles)
-        elif chosenCategory == "Town Support" or chosenCategory == 4:
+        elif chosenCategory == "Town Support" or chosenCategory == "4":
             finalRoles = roll(townSupp, finalRoles)    
-        elif chosenCategory == "Town Killing" or chosenCategory == 2:
+        elif chosenCategory == "Town Killing" or chosenCategory == "2":
             finalRoles = roll(townKill, finalRoles)  
-        elif chosenCategory == "Neutral Benign" or chosenCategory == 5:
+        elif chosenCategory == "Neutral Benign" or chosenCategory == "5":
             finalRoles = roll(neutBen, finalRoles)        
-        elif chosenCategory == "Neutral Evil" or chosenCategory == 7:
+        elif chosenCategory == "Neutral Evil" or chosenCategory == "7":
             finalRoles = roll(neuEvil, finalRoles)       
-        elif chosenCategory == "Neutral Killing" or chosenCategory == 8:
+        elif chosenCategory == "Neutral Killing" or chosenCategory == "8":
             finalRoles = roll(neuKill, finalRoles)
-        elif chosenCategory == "Neutral Chaos" or chosenCategory == 6:
+        elif chosenCategory == "Neutral Chaos" or chosenCategory == "6":
             finalRoles = roll(townProt, finalRoles)       
-        elif chosenCategory == "Mafia Deception" or chosenCategory == 9:
+        elif chosenCategory == "Mafia Deception" or chosenCategory == "9":
             finalRoles = roll(mafDec, finalRoles)  
-        elif chosenCategory == "Mafia Killing" or chosenCategory == 10:
+        elif chosenCategory == "Mafia Killing" or chosenCategory == "10":
             finalRoles = roll(mafKill, finalRoles)  
-        elif chosenCategory == "Mafia Support" or chosenCategory == 11:
+        elif chosenCategory == "Mafia Support" or chosenCategory == "11":
             finalRoles = roll(mafSupp, finalRoles)  
-        elif chosenCategory == "Coven" or chosenCategory == 12:
+        elif chosenCategory == "Coven" or chosenCategory == "12":
             finalRoles = roll(covenEvil, finalRoles) 
-        elif chosenCategory == "Random Town" or chosenCategory == 13:
+        elif chosenCategory == "Random Town" or chosenCategory == "13":
             finalRoles = roll(randomTownie, finalRoles)
-        elif chosenCategory == "Random Mafia" or chosenCategory == 14:
+        elif chosenCategory == "Random Mafia" or chosenCategory == "14":
             finalRoles = roll(randomMafia, finalRoles)
         else:
             if (chosenCategory in finalRoles ) and (chosenCategory in uniqueRoles):
